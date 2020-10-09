@@ -202,7 +202,7 @@ message ABitOfEverything {
 	// Nested is nested type.
 	message Nested {
 		option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-			example: "{ \"ok\": \"TRUE\" }"
+			example: "{\"ok\": \"TRUE\"}"
 		};
 		// name is nested field.
 		string name = 1;

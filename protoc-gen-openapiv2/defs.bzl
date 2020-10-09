@@ -73,9 +73,6 @@ def _run_proto_gen_openapi(
     if fqn_for_swagger_name:
         args.add("--swagger_opt", "fqn_for_swagger_name=true")
 
-    if fqn_for_swagger_name:
-        args.add("--swagger_opt", "fqn_for_swagger_name=true")
-
     proto_file_infos = _direct_source_infos(proto_info)
 
     # TODO(yannic): Use |proto_info.transitive_descriptor_sets| when
@@ -182,10 +179,6 @@ protoc_gen_openapiv2 = rule(
         ),
         "json_names_for_fields": attr.bool(
             default = True,
-            mandatory = False,
-        ),
-        "fqn_for_swagger_name": attr.bool(
-            default = False,
             mandatory = False,
         ),
         "fqn_for_swagger_name": attr.bool(
